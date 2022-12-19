@@ -8,7 +8,7 @@ const SingleCar = ({ car, refetch }) => {
     const { name, banner, milage, color, sit, turbo, _id } = car;
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/allcars?id=${id}`, {
+        fetch(`https://for-rent-server.vercel.app/allcars?id=${id}`, {
             method: "DELETE",
             headers: {
                 authorization: `bearer ${localStorage.getItem('ForRent-token')}`

@@ -33,7 +33,7 @@ const Navbar = () => {
     }
 
     const saveUser = (data) => {
-        fetch(`http://localhost:5000/users`, {
+        fetch(`https://for-rent-server.vercel.app/users`, {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -47,7 +47,7 @@ const Navbar = () => {
     }
 
     const getJWT = email => {
-        fetch(`http://localhost:5000/jwt?email=${email}`)
+        fetch(`https://for-rent-server.vercel.app/jwt?email=${email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)

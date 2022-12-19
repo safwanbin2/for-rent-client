@@ -34,7 +34,7 @@ const AddCar = () => {
                     condition: data.condition
                 }
 
-                fetch(`http://localhost:5000/allcars`, {
+                fetch(`https://for-rent-server.vercel.app/allcars`, {
                     method: "POST",
                     headers: {
                         "content-type": "application/json",

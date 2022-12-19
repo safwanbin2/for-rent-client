@@ -7,7 +7,7 @@ const Inventory = () => {
     const { data: cars, isLoading, refetch } = useQuery({
         queryKey: ['allcars'],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/allcars`);
+            const res = await fetch(`https://for-rent-server.vercel.app/allcars`);
             const data = await res.json();
             return data;
         }

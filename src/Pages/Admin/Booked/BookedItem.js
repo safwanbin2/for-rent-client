@@ -8,7 +8,7 @@ const BookedItem = ({ booking, refetch }) => {
     const { _id, carName, carImg, buyerName, buyerEmail, buyerPhone, carBrand, isApproved } = booking;
 
     const handleApprove = id => {
-        fetch(`http://localhost:5000/bookings/approve/${id}`, {
+        fetch(`https://for-rent-server.vercel.app/bookings/approve/${id}`, {
             method: "PUT",
             headers: {
                 authorization: `bearer ${localStorage.getItem('ForRent-token')}`

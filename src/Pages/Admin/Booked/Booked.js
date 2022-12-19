@@ -12,7 +12,7 @@ const Booked = () => {
     const { data: bookings, isLoading, refetch } = useQuery({
         queryKey: ['bookings', d],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/bookings/${d}`, {
+            const res = await fetch(`https://for-rent-server.vercel.app/bookings/${d}`, {
                 headers: {
                     authorization: `bearer ${localStorage.getItem('ForRent-token')}`
                 }
