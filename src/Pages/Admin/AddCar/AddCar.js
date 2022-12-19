@@ -57,7 +57,7 @@ const AddCar = () => {
             })
     }
     return (
-        <div className='w-[85%] mx-auto'>
+        <div className='w-[95%] md:w-[85%] mx-auto'>
             Add new Item:
             <form onSubmit={handleSubmit(handleAddCar)}>
                 {/* taking img */}

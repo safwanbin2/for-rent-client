@@ -17,10 +17,10 @@ const Cars = () => {
     }
     console.log(cars)
     return (
-        <div className='w-[85%] mx-auto my-10'>
+        <div className='w-[95%] md:w-[85%] mx-auto my-10'>
             <h2 className='font-bold text-2xl '>Cars that are available</h2>
             <h3 className='text-primary font-bold'>Choose one: </h3>
-            <div className='grid grid-cols-2 gap-8 my-5'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-8 my-5'>
                 {
                     cars.map(c => <Car
                         key={c._id}

@@ -4,7 +4,7 @@ import { FiPhoneCall, FiMessageSquare } from 'react-icons/fi';
 
 const Top = () => {
     return (
-        <div className='bg-secondary text-base-100 flex justify-center items-center gap-5 py-4'>
+        <div className='bg-secondary text-base-100 hidden md:flex justify-center items-center gap-5 py-4'>
             <div className='flex justify-center items-center gap-5'>
                 <h3 className='text-2xl'><FiPhoneCall /></h3>
                 <div className='text-end'>

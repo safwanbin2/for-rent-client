@@ -8,7 +8,7 @@ const Footer = () => {
         <footer className='bg-secondary text-base-100 flex flex-col justify-center items-center gap-5 py-10'>
             <img src={flame} alt="" />
             <p>@2022 Sexy Cars All Rights Reserved. </p>
-            <div className='flex justify-between items-center gap-5'>
+            <div className='flex flex-col md:flex-row text-center justify-between items-center gap-5'>
                 <div className='text-sm flex justify-center gap-2 items-center'>
                     <p><BsFillPhoneFill/></p>
                     <p>Telefon: +48 501 140 391</p>

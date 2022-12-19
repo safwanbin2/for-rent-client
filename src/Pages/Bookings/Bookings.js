@@ -6,7 +6,7 @@ import BookinItems from './BookinItems';
 
 const Cart = () => {
     const { user } = useContext(AuthContext);
-    const { data: bookings, isLoading } = useQuery({
+    const { data: bookings, isLoading, refetch } = useQuery({
         queryKey: [],
         queryFn: async () => {
             const res = await fetch(`http://localhost:5000/bookings?email=${user?.email}`, {
@@ -22,17 +22,18 @@ const Cart = () => {
         return <Loader></Loader>
     }
     return (
-        <div className="flex flex-col w-[85%] mx-auto py-6 space-y-4 ">
+        <div className="flex flex-col w-[95%] md:w-[85%] mx-auto py-6 space-y-4 ">
             <h2 className="text-xl font-semibold">Your cart</h2>
             <ul className="flex flex-col divide-y divide-gray-700">
                 {
                     bookings.map(booking => <BookinItems
                         key={booking._id}
                         booking={booking}
+                        refetch={refetch}
                     ></BookinItems>)
                 }
             </ul>
-            <div className="space-y-1 text-right">
+            {/* <div className="space-y-1 text-right">
                 <p>Total amount:
                     <span className="font-semibold">357 €</span>
                 </p>
@@ -45,7 +46,7 @@ const Cart = () => {
                 <button type="button" className="px-6 py-2 border rounded-md dark:bg-blue-400 dark:text-gray-900 dark:border-blue-400">
                     <span className="sr-only sm:not-sr-only">Continue to</span>Checkout
                 </button>
-            </div>
+            </div> */}
         </div>
     );
 };

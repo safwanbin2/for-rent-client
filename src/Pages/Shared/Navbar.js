@@ -72,7 +72,7 @@ const Navbar = () => {
                 <li><Link to='/addcar'>Add Car</Link></li>
             </ul>
         </li>
-        <li className='font-semibold'><Link to='/'>Contact</Link></li>
+        <li className='font-semibold'><Link to='/contact'>Contact</Link></li>
     </>
     const socialIcons = <>
         {user ? <div className="dropdown dropdown-end">
@@ -95,7 +95,7 @@ const Navbar = () => {
             : <button onClick={handleGoogleLogin} className='px-2 text-2xl'><BsGoogle /></button>}
     </>
     return (
-        <div className="navbar bg-base-100 w-[85%] mx-auto">
+        <div className="navbar bg-base-100 w-[95%] md:w-[85%] mx-auto">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">

@@ -2,6 +2,7 @@ import React from 'react';
 import { toast } from 'react-hot-toast';
 import { AiOutlineMail, AiOutlinePhone } from 'react-icons/ai';
 import { MdDriveFileRenameOutline, MdApproval } from 'react-icons/md';
+import './BookedItem.css';
 
 const BookedItem = ({ booking, refetch }) => {
     const { _id, carName, carImg, buyerName, buyerEmail, buyerPhone, carBrand, isApproved } = booking;
@@ -28,9 +29,9 @@ const BookedItem = ({ booking, refetch }) => {
     }
 
     return (
-        <div className='w-[85%] mx-auto my-10'>
-            <h2 className='text-2xl font-semibold'><span className='text-primary'>{carBrand}</span> : {carName}</h2>
-            <div className='grid items-center' style={{ gridTemplateColumns: "2fr 1fr" }}>
+        <div className='w-[95%] md:w-[85%] mx-auto my-10 shadow-lg p-2'>
+            <h2 className='text-xl md:text-2xl font-semibold'><span className='text-primary'>{carBrand}</span> : {carName}</h2>
+            <div className='grid items-center booked-item'>
                 <img src={carImg} alt="" />
                 <div>
                     <div>

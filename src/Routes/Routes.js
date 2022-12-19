@@ -7,6 +7,7 @@ import Bookings from '../Pages/Bookings/Bookings';
 import Inventory from "../Pages/Admin/Inventory/Inventory";
 import AddCar from "../Pages/Admin/AddCar/AddCar";
 import Booked from "../Pages/Admin/Booked/Booked";
+import Contact from "../Pages/Contact/Contact";
 
 export const router = createBrowserRouter([
     {
@@ -18,6 +19,10 @@ export const router = createBrowserRouter([
             {
                 path: '/home',
                 element: <Home></Home>
+            },
+            {
+                path: "/contact",
+                element: <Contact></Contact>
             },
             {
                 path: '/car/:id',

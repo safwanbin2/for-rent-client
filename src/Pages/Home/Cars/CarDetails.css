@@ -1,0 +1,9 @@
+.car-banner{
+    grid-template-columns: 2fr 1fr;
+}
+
+@media screen and (max-width: 667px) {
+    .car-banner{
+        grid-template-columns: 1fr;
+    }
+}

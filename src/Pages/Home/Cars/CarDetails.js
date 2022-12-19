@@ -5,6 +5,7 @@ import { IoMdColorFill, IoMdColorPalette } from 'react-icons/io';
 import { TbArmchair, TbEngine } from 'react-icons/tb';
 import { useLoaderData } from 'react-router-dom';
 import CarModal from './CarModal';
+import './CarDetails.css';
 
 const CarDetails = () => {
     const car = useLoaderData();
@@ -13,40 +14,38 @@ const CarDetails = () => {
     const [bookCar, setBookCar] = useState('')
 
     return (
-        <div className='w-[85%] mx-auto my-10'>
+        <div className='w-[95%] md:w-[85%] mx-auto my-10'>
             <h2 className='text-2xl font-semibold'><span className='text-primary'>{brand}</span> : {name}</h2>
-            <div className='grid items-center' style={{ gridTemplateColumns: "2fr 1fr" }}>
+            <div className='grid items-center car-banner'>
                 <img src={banner} alt="" />
-                <div>
-                    <div>
-                        <div className='flex gap-2 my-2 items-center'>
-                            <p className='text-xl'><IoMdColorPalette /></p>
-                            <p>{color}</p>
-                        </div>
-                        <div className='flex gap-2 my-2 items-center'>
-                            <p className='text-xl'><IoMdColorFill /></p>
-                            <p>{milage}</p>
-                        </div>
-                        <div className='flex gap-2 my-2 items-center'>
-                            <p className='text-xl'><TbArmchair /></p>
-                            <p>{sit}</p>
-                        </div>
-                        <div className='flex gap-2 my-2 items-center'>
-                            <p className='text-xl'><TbEngine /></p>
-                            <p>{turbo} turbo</p>
-                        </div>
-                        <div className='flex gap-2 my-2 items-center'>
-                            <p className='text-xl'><FiDollarSign /></p>
-                            <p>{perDay} per day</p>
-                        </div>
-                        <div className='flex gap-2 my-2 items-center'>
-                            <p className='text-xl'><GoLocation /></p>
-                            <p>{location}</p>
-                        </div>
-                        <div className='flex gap-2 my-2 items-center'>
-                            <p className='text-xl'><GoNote /></p>
-                            <p>{condition}</p>
-                        </div>
+                <div className='grid grid-cols-2 md:grid-cols-1'>
+                    <div className='flex gap-2 my-2 items-center'>
+                        <p className='text-xl'><IoMdColorPalette /></p>
+                        <p>{color}</p>
+                    </div>
+                    <div className='flex gap-2 my-2 items-center'>
+                        <p className='text-xl'><IoMdColorFill /></p>
+                        <p>{milage}</p>
+                    </div>
+                    <div className='flex gap-2 my-2 items-center'>
+                        <p className='text-xl'><TbArmchair /></p>
+                        <p>{sit}</p>
+                    </div>
+                    <div className='flex gap-2 my-2 items-center'>
+                        <p className='text-xl'><TbEngine /></p>
+                        <p>{turbo} turbo</p>
+                    </div>
+                    <div className='flex gap-2 my-2 items-center'>
+                        <p className='text-xl'><FiDollarSign /></p>
+                        <p>{perDay} per day</p>
+                    </div>
+                    <div className='flex gap-2 my-2 items-center'>
+                        <p className='text-xl'><GoLocation /></p>
+                        <p>{location}</p>
+                    </div>
+                    <div className='flex gap-2 my-2 items-center'>
+                        <p className='text-xl'><GoNote /></p>
+                        <p>{condition}</p>
                     </div>
                 </div>
             </div>

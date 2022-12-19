@@ -27,7 +27,7 @@ const Booked = () => {
     }
 
     return (
-        <div className='w-[85%] mx-auto'>
+        <div className='w-[95%] md:w-[85%] mx-auto'>
             <section className="">
                 <div className="container flex flex-col justify-center mx-auto sm:py-6 lg:py-12 lg:flex-row lg:justify-between">
                     <div className="flex items-center justify-center py-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
@@ -49,7 +49,7 @@ const Booked = () => {
             <div>
                 {
                     bookings.length ? <div>
-                        <h2 className='text-2xl font-semibold text-primary'>{d}'s Bookings : </h2>
+                        <h2 className='text-base md:text-2xl font-semibold text-primary'>{d}'s Bookings : </h2>
                         {
                             bookings.map(b => <BookedItem
                                 key={b._id}

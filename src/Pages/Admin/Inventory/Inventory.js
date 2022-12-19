@@ -17,9 +17,9 @@ const Inventory = () => {
     }
     console.log(cars);
     return (
-        <div className='w-[85%] mx-auto my-10'>
+        <div className='w-[95%] md:w-[85%] mx-auto my-10'>
             <h2 className='font-bold text-primary text-2xl '>Total Cars</h2>
-            <div className='grid grid-cols-2 gap-8 my-5'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-8 my-5'>
                 {
                     cars.map(c => <SingleCar
                         key={c._id}
