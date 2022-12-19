@@ -61,7 +61,7 @@ const Navbar = () => {
             <label tabIndex={0} className="">Client</label>
             <ul tabIndex={0} className="dropdown-content menu p-2 ml-2 shadow bg-base-100 rounded-box w-52">
                 <li className='font-semibold'><Link to='/bookings'>Cart</Link></li>
-                <li className='font-semibold'><Link to='/'>Wishlist</Link></li>
+                <li className='font-semibold'><Link to=''>comming soon</Link></li>
             </ul>
         </li>
         <li className="dropdown dropdown-hover font-semibold">

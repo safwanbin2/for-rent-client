@@ -30,15 +30,15 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/inventory',
-                element: <Inventory></Inventory>
+                element: <PrivateRoute><Inventory></Inventory></PrivateRoute>
             },
             {
                 path: '/addcar',
-                element: <AddCar></AddCar>
+                element: <PrivateRoute><AddCar></AddCar></PrivateRoute>
             },
             {
                 path: '/booked',
-                element: <Booked></Booked>
+                element: <PrivateRoute><Booked></Booked></PrivateRoute>
             }
         ]
     }

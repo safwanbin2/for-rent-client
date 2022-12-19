@@ -26,7 +26,7 @@ const SingleCar = ({ car, refetch }) => {
     return (
         <div to={`car/${_id}`} className='bg-base-200 p-6 hover:shadow-lg relative car-parent'>
             <h3 className='text-2xl font-semibold text-center mb-4'>{name}</h3>
-            <div className='grid' style={{ gridTemplateColumns: "2fr 1fr" }}>
+            <div className='grid items-center' style={{ gridTemplateColumns: "2fr 1fr" }}>
                 <img src={banner} alt="" />
                 <div>
                     <div className='flex gap-2 my-2'>

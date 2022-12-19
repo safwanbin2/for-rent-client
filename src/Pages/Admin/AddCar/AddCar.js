@@ -1,11 +1,60 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
 const AddCar = () => {
-
+    const navigate = useNavigate();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const handleAddCar = data => {
-        console.log(data)
+        const image = data.banner[0];
+        const formData = new FormData();
+        formData.append('image', image)
+
+        fetch(`https://api.imgbb.com/1/upload?key=ee207df4d4ece17d8fc4767557525c84`, {
+            method: "POST",
+            body: formData
+        })
+            .then(res => res.json())
+            .then(imgData => {
+                const banner = imgData.data.url;
+
+                const newCar = {
+                    brand: data.brand,
+                    name: data.name,
+                    banner: banner,
+                    location: data.location,
+                    sit: data.sit,
+                    milage: data.milage,
+                    perDay: data.perDay,
+                    description1: data.description1,
+                    description2: data.description2,
+                    color: data.color,
+                    turbo: data.turbo,
+                    condition: data.condition
+                }
+
+                fetch(`http://localhost:5000/allcars`, {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json",
+                        authorization: `bearer ${localStorage.getItem('ForRent-token')}`
+                    },
+                    body: JSON.stringify(newCar)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if(data.acknowledged){
+                            toast.success('added successfully')
+                            navigate('/')
+                        }
+                    })
+                    .catch(err => {
+                        console.log(err)
+                        toast.error('could not add')
+                    })
+            })
     }
     return (
         <div className='w-[85%] mx-auto'>
